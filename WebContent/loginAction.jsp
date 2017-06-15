@@ -19,12 +19,25 @@
 
 <body>
     <%
+    String userID = null;
+    if(session.getAttribute("userID") != null){
+        userID = (String) session.getAttribute("userID");
+    }
+    if(userID != null){
+        PrintWriter script = response.getWriter();
+        script.println("<script>");
+        script.println("alert('이미 로그인되어 있습니다..')");
+        script.println("location.href = 'index.jsp'");
+        script.println("</script>");
+    }
+    
     DaoUser daouser = new DaoUser();
     int result = daouser.login(user.getUserID(), user.getUserPassword());
     if(result == 1){
+        session.setAttribute("userID", user.getUserID());
         PrintWriter script = response.getWriter();
         script.println("<script>");
-        script.println("location.href = 'main.jsp'");
+        script.println("location.href = 'index.jsp'");
         script.println("</script>");
     }
     else if(result == 0){

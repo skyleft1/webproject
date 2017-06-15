@@ -30,7 +30,7 @@ public class DaoUser {
 //    return conn;
     
     
-    // login.jsp �� ��Ȯ�ϰ� �����ϴ� ���� ���� �� ������
+    // login.jsp 
     
     public DaoUser(){
         String dbURL = "jdbc:mysql://localhost:3306/BBS?useUnicode=true&characterEncoding=utf8";

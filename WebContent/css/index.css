@@ -42,7 +42,6 @@ body {
 	border: 1px solid;
 }
 
-
 #login {
 	width: 250px; height: 70px;
 	border: 1px solid;
@@ -54,9 +53,23 @@ body {
 	margin: 0 0 0 10px;
 	float: left;
 	list-style:none;
-
 	border: 1px solid;
 }
+
+#logout {
+    width: 250px; height: 70px;
+    border: 1px solid;
+    float: right;
+}
+
+#logout li {
+    width: 80px; height: 30px;
+    margin: 0 0 0 10px;
+    float: left;
+    list-style:none;
+    border: 1px solid;
+}
+
 
 #image_slide {
 	margin: 0 auto;

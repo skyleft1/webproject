@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import = "java.io.PrintWriter" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +12,14 @@
 </head>
 <body>
 
+<%
+String userID = null;
+if (session.getAttribute("userID") != null) {
+    userID = (String) session.getAttribute("userID");
+}
+%>
+
+
 <div id= "header" >
   <div id= "nav_back">
     <div id= "nav_login">
@@ -19,16 +29,36 @@
           <li class="menu2">menu2</li>
           <li class="menu3">menu3</li>
           <li class="menu4">menu4</li>
-          <li class="menu5">menu5</li>
+          <li class="menu5">게시판</li>
         </ul>
       </div>
       <div></div>
+      
+      <%
+      if(userID == null){
+      %>
+
       <div id="login">login
         <ul>
-          <li class="sign_in"><a href="login.jsp">sign_in</a></li>
-          <li class="sign_up"><a href="join.jsp">sign_up</a></li>
+          <li class="sign_in"><a href="login.jsp">로그인</a></li>
+          <li class="sign_up"><a href="join.jsp">회원가입</a></li>
         </ul>
       </div>
+      <%
+      } else {
+      %>
+      
+      <div id="logout">
+        <ui>  반갑습니다. </ui>      
+        <ul>
+          <li class="account_setting"><a href="#">회원관리</a></li>
+          <li class="sign_out"><a href="logoutAction.jsp">로그아웃</a></li>
+        </ul>
+      </div>
+      <%
+      }
+      %>
+      
     </div>
   </div>
 

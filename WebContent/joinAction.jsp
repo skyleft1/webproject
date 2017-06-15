@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="user.DaoUser" %>
-<%@ page import="java.io.PrintWriter" %>
+<%@ page import = "java.io.*" %>
 <% request.setCharacterEncoding("UTF-8"); %>
 <jsp:useBean id="user" class="user.User" scope="page"/>
 <jsp:setProperty name="user" property="userID"/>
@@ -45,20 +45,20 @@
     else {
         DaoUser daouser = new DaoUser();
         int result = daouser.join(user);
-        if(result == 0){
-            session.setAttribute("userID", user.getUserID());
-            PrintWriter script = response.getWriter();
-            script.println("<script>");
-            script.println("location.href = 'index.jsp'");
-            script.println("</script>");
-        }
-        else if(result == -1){
+        if(result == -1){
             PrintWriter script = response.getWriter();
             script.println("<script>");
             script.println("alert('이미 존재하는 아이디 입니다.')");
             script.println("history.back()");
             script.println("</script>");
         }
+		else {
+            session.setAttribute("userID", user.getUserID());
+            PrintWriter script = response.getWriter();
+            script.println("<script>");
+            script.println("location.href = 'index.jsp'");
+            script.println("</script>");
+		}
     }
  
     %>

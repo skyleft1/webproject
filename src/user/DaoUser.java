@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
+
 
 public class DaoUser {
     private Connection conn;
@@ -80,7 +80,7 @@ public class DaoUser {
         } catch(Exception e){
             e.printStackTrace();
         }
-        return -1;  // ������ ���̽� ����
+        return -1;  // 데이터베이스 오류
     }
     
 }

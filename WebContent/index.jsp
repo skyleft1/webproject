@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import = "java.io.PrintWriter" %>
+<%@ page import = "java.io.*" %>
+
 
 <!DOCTYPE html>
 <html>
@@ -14,7 +15,7 @@
 
 <%
 String userID = null;
-if (session.getAttribute("userID") != null) {
+	if (session.getAttribute("userID") != null) {
     userID = (String) session.getAttribute("userID");
 }
 %>
@@ -29,7 +30,7 @@ if (session.getAttribute("userID") != null) {
           <li class="menu2">menu2</li>
           <li class="menu3">menu3</li>
           <li class="menu4">menu4</li>
-          <li class="menu5">게시판</li>
+          <li class="menu5"><a href='BBS.jsp'>게시판</a></li>
         </ul>
       </div>
       <div></div>
@@ -46,10 +47,10 @@ if (session.getAttribute("userID") != null) {
       </div>
       <%
       } else {
-      %>
+     %>
       
       <div id="logout">
-        <ui>  반갑습니다. </ui>      
+        <ul><h2>반갑습니다.</h2></ul>      
         <ul>
           <li class="account_setting"><a href="#">회원관리</a></li>
           <li class="sign_out"><a href="logoutAction.jsp">로그아웃</a></li>

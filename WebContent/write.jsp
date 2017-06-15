@@ -13,13 +13,13 @@
 <script src='http://code.jquery.com/jquery-3.1.1.min.js'></script>
 
 <div class="container">
-    <form action ="location.href ='BBS.jsp'" method = "post" enctype ="text/plain" ]>
+    <form action ="writeAction.jsp" method = "post">
         <div class="bbs_title">
-            <input type="text" name="bbs_title1"/> 
+            <input type="text" name="bbsTitle"/> 
         </div>
             
-        <div class="bbs_context">
-            <input type="text" name="bbs_context1"/>
+        <div class="bbs_content">
+            <input type="text" name="bbsContent"/>
         </div>
     
         <div class="bbs_submit">

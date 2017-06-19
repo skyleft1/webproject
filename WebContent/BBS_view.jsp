@@ -9,12 +9,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+<link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="css/BBS_view.css">
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/common.js"></script>
+
 <title>jsp 게시판 웹 사이트 + 게시판</title>
 </head>
 <body>
 
-<script src='http://code.jquery.com/jquery-3.1.1.min.js'></script>
+<div id = "header"></div>
 
 <%
 
@@ -60,7 +64,7 @@
         <div>
         </div>
     </div>
-
+<div id = "footer"></div>
 
 </body>
 </html>

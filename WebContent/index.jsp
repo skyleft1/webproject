@@ -8,83 +8,37 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+<link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="css/index.css">
+
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/common.js"></script>
+
 <title>jsp 게시판 웹 사이트</title>
 </head>
+
 <body>
 
-<%
-String userID = null;
-	if (session.getAttribute("userID") != null) {
-    userID = (String) session.getAttribute("userID");
-}
-%>
+    <div id="header"></div>
 
-
-<div id= "header" >
-  <div id= "nav_back">
-    <div id= "nav_login">
-      <div id="nav">nav
-        <ul>
-          <li class="menu1">menu1</li>
-          <li class="menu2">menu2</li>
-          <li class="menu3">menu3</li>
-          <li class="menu4">menu4</li>
-          <li class="menu5"><a href='BBS.jsp'>게시판</a></li>
-        </ul>
-      </div>
-      <div></div>
-      
-      <%
-      if(userID == null){
-      %>
-
-      <div id="login">login
-        <ul>
-          <li class="sign_in"><a href="login.jsp">로그인</a></li>
-          <li class="sign_up"><a href="join.jsp">회원가입</a></li>
-        </ul>
-      </div>
-      <%
-      } else {
-     %>
-      
-      <div id="logout">
-        <ul><h2>반갑습니다.</h2></ul>      
-        <ul>
-          <li class="account_setting"><a href="#">회원관리</a></li>
-          <li class="sign_out"><a href="logoutAction.jsp">로그아웃</a></li>
-        </ul>
-      </div>
-      <%
-      }
-      %>
-      
+    <div class="content">
+        <div id="banner">
+            <div id="slide_banner1">
+                <img src="img/설현.jpg" alt="slide 1" />
+            </div>
+            <div id="slide_banner2">
+                <img src="img/성소.png" alt="slide 1" />
+            </div>
+            <div id="slide_banner3">
+                <img src="img/연서.jpg" alt="slide 1" />
+            </div>
+            <div id="slide_banner4">
+                <img src="img/보영.jpg" alt="slide 1" />
+            </div>
+        </div>
     </div>
-  </div>
 
-  <div id ="image_slide">
-    <!-- <img src="css/header_main1.jpg" alt="slide 1" /> -->
-
-  
-  </div>
-</div>
-
-<div id="banner">
-  <div id = "slide_banner1">slide_banner1
-    <img src="css/banner/exer01.jpg" alt="slide 1" />
-  </div>
-  <div id = "slide_banner2"> slide_banner2
-    <img src="css/banner/exer02.jpg" alt="slide 1" />
-  </div>
-  <div id = "slide_banner3"> slide_banner3
-    <img src="css/banner/exer04.jpg" alt="slide 1" />
-  </div>
-</div>
-
-
-<div id = "footer"> footer
-</div>
+    <div id="footer"></div>
 
 
 </body>

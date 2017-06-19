@@ -5,14 +5,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/index.css">
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/common.js"></script>
+
 <title>jsp 게시판 웹 사이트 + 회원가입</title>
 </head>
 <body>
 
-<script src='http://code.jquery.com/jquery-3.1.1.min.js'></script>
+<div id ="header"></div>
 
-<div class="outline">
+<div class="content">
     <div class="header">join
         <form method ='post' action = 'joinAction.jsp'>
             <div class="input_userid">아이디
@@ -42,7 +46,7 @@
 
 </div>
 
-
+<div id ="footer"></div>
 
 </body>
 </html>

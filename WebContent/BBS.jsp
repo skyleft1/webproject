@@ -10,8 +10,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<link rel="stylesheet" href="css/BBS.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/index.css">
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/common.js"></script>
+
 <title>jsp 게시판 웹 사이트 + 게시판</title>
+
+
 </head>
 <body>
 
@@ -21,9 +27,9 @@ if(request.getParameter("pageNumber") != null){
 }
 %>
 
-<script src='http://code.jquery.com/jquery-3.1.1.min.js'></script>
+<div id = "header"></div>
 
-<div class="container">
+<div class="content">
     <div class="row">
         <table class="table-striped">
             <thead>
@@ -68,6 +74,7 @@ if(request.getParameter("pageNumber") != null){
     </div>
 </div>
 
+<div id = "footer"></div>
 
 
 </body>

@@ -10,7 +10,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="stylesheet" href="css/common.css">
-<link rel="stylesheet" href="css/BBS_view.css">
+<link rel="stylesheet" href="css/bbs_view.css">
 <script src="js/jquery-3.1.0.min.js"></script>
 <script src="js/common.js"></script>
 
@@ -39,32 +39,53 @@
 
 %>
 
-    <div class="container">
-        <div class="bbs_view_bbsid">
-        <%= bbs.getBbsID() %>
-        </div>
+	<div class="content">
+		<div class="container">
+			<div class="bbs_div"></div>
+			<div class="cover_bbsid_title_modify_delete">
+				<div class="bbs_view_bbsid">
+					<%=bbs.getBbsID()%>
+				</div>
 
-        <div class="bbs_view_title">
-        <%= bbs.getBbsTitle() %>
-        </div>
+				<div class="bbs_view_title">
+					<h3><%=bbs.getBbsTitle()%></h3>
+				</div>
+				<div class="bbs_view_modify">
+					<input type="button" value="수정" name="">
+				</div>
+				<div class="bbs_view_delete">
+					<input type="button" value="삭제" name="">
+				</div>
+			</div>
 
-        <div class="bbs_view_userid">
-        <%= bbs.getUserID() %>
-        </div>
+			<div class="bbs_div"></div>
+			<div class="cover_userid_date">
+				<div class="bbs_view_userid">
+					[작성자]
+					<%=bbs.getUserID()%>
+				</div>
 
-        <div class="bbs_view_date">
+				<div class="bbs_view_date">
+					[작성일자]
+					<%=bbs.getBbsDate().substring(0, 11) + bbs.getBbsDate().substring(11, 13) + "시"
+					+ bbs.getBbsDate().substring(14, 16) + "분"%>
+				</div>
+			</div>
+			<div class="bbs_div"></div>
+			
+			<div class="cover_content">
+				<div class="bbs_view_content">
+					<%=bbs.getBbsContent()%>
+				</div>
+			</div>
+			<div class="bbs_div"></div>
 
-        </div>
 
-        <div class="bbs_view_content">
-        <%= bbs.getBbsContent() %>
-        </div>
-        
-        
-        <div>
-        </div>
-    </div>
-<div id = "footer"></div>
+			<div></div>
+		</div>
+	</div>
+
+	<div id = "footer"></div>
 
 </body>
 </html>

@@ -12,6 +12,7 @@
 
 <link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/bbs.css">
 <script src="js/jquery-3.1.0.min.js"></script>
 <script src="js/common.js"></script>
 
@@ -29,47 +30,54 @@ if(request.getParameter("pageNumber") != null){
 
 <div id = "header"></div>
 
-<div class="content">
-    <div class="row">
-        <table class="table-striped">
-            <thead>
-                <tr>
-                    <th style="background-color: yellow; text-align: center;">번호</th>
-                    <th style="background-color: yellow; text-align: center;">제목</th>
-                    <th style="background-color: yellow; text-align: center;">작성자</th>
-                    <th style="background-color: yellow; text-align: center;">작성일</th>
-                </tr>
-            </thead>
-            <tbody>
+	<div class="content">
+		<div class="row">
+		<h1>게시판</h1>
+			<table class="bbs_table">
+				<thead>
+				<tr>
+					<th style="width: 10%;">번호</th>
+					<th style="width: 50%;">제목</th>
+					<th style="width: 15%;">작성자</th>
+					<th style="width: 25%;">작성일</th>
+				</tr>
+				</thead>
+
+
+				<tbody>
             	<%
-            	DaoBbs daobbs = new DaoBbs(); 
-            	ArrayList<Bbs> list = daobbs.getList(pageNumber);
-            	for(int i=0; i<list.size(); i++){
+            		DaoBbs daobbs = new DaoBbs();
+            		ArrayList<Bbs> list = daobbs.getList(pageNumber);
+            		for (int i = 0; i < list.size(); i++) {
             	%>
 				<tr>
-                    <td><%= list.get(i).getBbsID() %></td> 
-                    <td><a href="BBS_view.jsp?bbsID=<%= list.get(i).getBbsID() %>"><%= list.get(i).getBbsTitle() %></a></td>
-                    <td><%= list.get(i).getUserID() %></td>
-                    <td><%= list.get(i).getBbsDate().substring(0, 11)+list.get(i).getBbsDate().substring(11, 13)+"시"+ list.get(i).getBbsDate().substring(14, 16)+"분" %></td>
+                    <td><%=list.get(i).getBbsID()%></td> 
+                    <td><a
+							href="BBS_view.jsp?bbsID=<%=list.get(i).getBbsID()%>"><%=list.get(i).getBbsTitle()%></a></td>
+                    <td><%=list.get(i).getUserID()%></td>
+                    <td><%=list.get(i).getBbsDate().substring(0, 11) + list.get(i).getBbsDate().substring(11, 13) + "시"
+						+ list.get(i).getBbsDate().substring(14, 16) + "분"%></td>
                 </tr>
             	<%
-            	}
+            		}
             	%>
             </tbody>
         </table>
 	        <%
-	        if(pageNumber != 1){
-			%>	
-				<a href="BBS.jsp?pageNumber=<%=pageNumber - 1 %>" class="#">이전</a>
+	        	if (pageNumber != 1) {
+	        %>	
+				<a href="BBS.jsp?pageNumber=<%=pageNumber - 1%>" class="#">이전</a>
 	        <%
-	        } if(daobbs.nextPage(pageNumber + 1)){
+	        	}
+	        	if (daobbs.nextPage(pageNumber + 1)) {
 	        %>
-	        	<a href="BBS.jsp?pageNumber=<%=pageNumber + 1 %>" class="#">다음</a>
+	        	<a href="BBS.jsp?pageNumber=<%=pageNumber + 1%>" class="#">다음</a>
 	        <%
-	        }
+	        	}
 	        %>	
 			
-        <input type="button" value="글쓰기" onclick="location.href ='write.jsp'"/>
+        <input type="button" value="글쓰기"
+				onclick="location.href ='write.jsp'" />
         
     </div>
 </div>

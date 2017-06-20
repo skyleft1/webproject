@@ -1,12 +1,13 @@
 .content_inner{
-    
+    font-size : 15px;
+
 }
-.w350h200{
+.w350h400{
     display: inline-block;
     margin: 20px 10px;
     width: 350px; height: 400px;
+    background-color : #efefef;
 
-    border: 1px solid;
 }
 
 .content_img{
@@ -20,24 +21,69 @@
 .content_login{
     vertical-align:top;
     text-align :left;
-    
+
 }
 
 .content_login form{
     margin : 30px;
 } 
 
-.content_login form > div{
-    margin-bottom : 10px;
+.content_login form div{
+    margin-bottom : 20px;
+}
+
+
+.content_login input[type='text' ],
+.content_login input[type='password' ] {
+    width:280px;
+    height:30px;
+    font-size: 15px;
+    margin-top : -5px;
+}
+
+.login_confirm{
+    margin-top:40px;
+    
+}
+
+.login_confirm input{
+    width: 283px;
+    height: 35px;
+    background-color: rgba(150, 150, 150, 0.46);
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor : pointer;
+}
+
+.signUp input{
+    width: 133px;
+    height: 35px;
+    background-color: rgba(150, 150, 150, 0.46);
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor : pointer;
+    
+}
+
+.password_find input{
+    margin-left : 10px;
+    width: 133px;
+    height: 35px;
+    background-color: rgba(150, 150, 150, 0.46);
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor : pointer;
+}
+
+.password_find a{
+    display:inline-block;
 }
 
 .signUp_password_find > div{
     display : inline-block;
 }
 
-.content_login form > div[class^=input] input {
-    margin-left : 10px;
-}
-.content_login form > div[class^=input]:first-child input{
-    margin-left:26px;
-}
+

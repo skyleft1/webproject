@@ -24,16 +24,16 @@
     <div class="content">
         <div id="banner">
             <div id="slide_banner1">
-                <img src="img/설현.jpg" alt="slide 1" />
+                <img src="img/번개02.gif" alt="slide 1" />
             </div>
             <div id="slide_banner2">
-                <img src="img/성소.png" alt="slide 1" />
+                <img src="img/번개03.gif" alt="slide 1" />
             </div>
             <div id="slide_banner3">
-                <img src="img/연서.jpg" alt="slide 1" />
+                <img src="img/번개04.gif" alt="slide 1" />
             </div>
             <div id="slide_banner4">
-                <img src="img/보영.jpg" alt="slide 1" />
+                <img src="img/번개05.gif" alt="slide 1" />
             </div>
         </div>
     </div>

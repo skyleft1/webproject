@@ -23,7 +23,7 @@
 .bbs_view_modify input{
     height: 30px;
     width: 100%;
-    background-color: rgba(150, 150, 150, 0.46);
+    background-color: #d0d0d0;
     border: none;
     border-radius: 3px;
     font-size: 15px;
@@ -38,7 +38,7 @@
 .bbs_view_delete input{
     height: 30px;
     width: 100%;
-    background-color: rgba(150, 150, 150, 0.46);
+    background-color: #d0d0d0;
     border: none;
     border-radius: 3px;
     font-size: 15px;

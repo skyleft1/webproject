@@ -41,7 +41,9 @@
                     </div>
                     <div class="signUp_password_find">
                         <div class="signUp">
+                            <a href="join.jsp" src=""> 
                             <input type="button" class="" value="회원가입" />
+                            </a>
                         </div>
                         <div class="password_find">
                             <a href="http://www.naver.com" src=""> <input

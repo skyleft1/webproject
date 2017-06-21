@@ -48,17 +48,22 @@
 .login_confirm input{
     width: 283px;
     height: 35px;
-    background-color: rgba(150, 150, 150, 0.46);
+    background-color: #d0d0d0;
     border: none;
     border-radius: 3px;
     font-size: 15px;
     cursor : pointer;
 }
 
+.signUp a{
+     display:inline-block;
+}
+
+
 .signUp input{
     width: 133px;
     height: 35px;
-    background-color: rgba(150, 150, 150, 0.46);
+    background-color: #d0d0d0;
     border: none;
     border-radius: 3px;
     font-size: 15px;
@@ -66,20 +71,22 @@
     
 }
 
+.password_find a{
+    display:inline-block;
+}
+
 .password_find input{
     margin-left : 10px;
     width: 133px;
     height: 35px;
-    background-color: rgba(150, 150, 150, 0.46);
+    background-color: #d0d0d0;
     border: none;
     border-radius: 3px;
     font-size: 15px;
     cursor : pointer;
 }
 
-.password_find a{
-    display:inline-block;
-}
+
 
 .signUp_password_find > div{
     display : inline-block;

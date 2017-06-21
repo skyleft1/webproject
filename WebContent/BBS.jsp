@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/bbs.css">
+
 <script src="js/jquery-3.1.0.min.js"></script>
 <script src="js/common.js"></script>
 
@@ -34,14 +35,14 @@ if(request.getParameter("pageNumber") != null){
 		<div class="row">
 		<h1>게시판</h1>
 			<table class="bbs_table">
-				<thead>
+				<colgroup>
 				<tr>
 					<th style="width: 10%;">번호</th>
 					<th style="width: 50%;">제목</th>
 					<th style="width: 15%;">작성자</th>
 					<th style="width: 25%;">작성일</th>
 				</tr>
-				</thead>
+				</colgroup>
 
 
 				<tbody>
@@ -63,22 +64,24 @@ if(request.getParameter("pageNumber") != null){
             	%>
             </tbody>
         </table>
+        <div class="content_bottom1">
 	        <%
 	        	if (pageNumber != 1) {
 	        %>	
-				<a href="BBS.jsp?pageNumber=<%=pageNumber - 1%>" class="#">이전</a>
+				 
+                <a href="BBS.jsp?pageNumber=<%=pageNumber - 1%>" class="a1"><input type="button" class="" value="이전" /></a>
 	        <%
 	        	}
 	        	if (daobbs.nextPage(pageNumber + 1)) {
 	        %>
-	        	<a href="BBS.jsp?pageNumber=<%=pageNumber + 1%>" class="#">다음</a>
+	        	<a href="BBS.jsp?pageNumber=<%=pageNumber + 1%>" class="a2"><input type="button" class="" value="다음" /></a>
 	        <%
 	        	}
 	        %>	
-			
-        <input type="button" value="글쓰기"
-				onclick="location.href ='write.jsp'" />
-        
+
+            <input type="button" class="content_bottom2" value="글쓰기"
+				    onclick="location.href ='write.jsp'" />
+        </div>
     </div>
 </div>
 

@@ -1,3 +1,7 @@
+.content a{
+	color: #888;
+}
+
 .row{
     display: inline-block;
 }

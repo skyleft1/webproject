@@ -8,23 +8,60 @@ String userID = null;
 }
 %>
 
-  <div id= "nav_back">
+  <div class= "nav_back">
   
-    <div id= "nav_login">
-    <div class="logo" ><a href ="index.jsp"></a> </div>
-      <div id="nav">
-        <ul>
-          <li class="menu1">menu1</li>
-          <li class="menu2">menu2</li>
-          <li class="menu3">menu3</li>
-          <li class="menu4">menu4</li>
-          <li class="menu5"><a href='BBS.jsp'>게시판</a></li>
-        </ul>
-      </div>
-      
-      <%
-      if(userID == null){
-      %>
+    <div class= "nav_login">
+    <div class="logo"><a href ="index.jsp"></a> </div>
+		<div class="nav">
+			<ul class="menu">
+				<li>munu11
+					<ul>
+						<li>menu1</li>
+						<li>menu1</li>
+						<li>menu1</li>
+						<li>menu1</li>
+					</ul>
+				</li>
+				<li>menu22
+					<ul>
+						<li>menu1</li>
+						<li>menu1</li>
+						<li>menu1</li>
+						<li>menu1</li>
+					</ul>
+				</li>
+				<li>menu11
+					<ul>
+						<li>menu1</li>
+						<li>menu1</li>
+						<li>menu1</li>
+						<li>menu1</li>
+					</ul>
+				</li>
+				<li>menu11
+					<ul>
+						<li>menu1</li>
+						<li>menu1</li>
+						<li>menu1</li>
+						<li>menu1</li>
+					</ul>
+				</li>
+				<li class="menu5">menu5
+					<ul>
+						<li><a href='BBS.jsp'>게시판</a></li>
+						<li>menu1</li>
+						<li>menu1</li>
+						<li>menu1</li>
+					</ul>
+				</li>
+					
+			</ul>
+			</div>
+
+
+		<%
+			if (userID == null) {
+		%>
 
       <div id="login">
         <ul>
@@ -50,5 +87,5 @@ String userID = null;
       
     </div>
   </div>
-
+		</div>
   

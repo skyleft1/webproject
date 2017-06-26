@@ -14,14 +14,23 @@
 <script src="js/jquery-3.1.0.min.js"></script>
 <script src="js/common.js"></script>
 
+
 <title>jsp 게시판 웹 사이트</title>
+
+
 </head>
 
 <body>
 
     <div id="header"></div>
-
+	
+<!--메인 사진 -->
+        <div class="main_content">
+        	<img src="img/부다페스트.jpg" alt='main_content'/>
+        </div>
+	
     <div class="content">
+<!--배너 -->
         <div id="banner">
             <div id="slide_banner1">
                 <img src="img/번개02.gif" alt="slide 1" />

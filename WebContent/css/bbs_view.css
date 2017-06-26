@@ -1,8 +1,18 @@
+<<<<<<< .mine
+
+.cover_bbsid_title_modify_delete{
+=======
+.content_inner{
+
+>>>>>>> .theirs
+	display: inline-block;
+	width:800px;
+	background-color:#efefef;
+}
 
 .cover_bbsid_title_modify_delete{
 	display: inline-block;
-	background-color:#efefef;
-	width:950px;
+	width:100%;
 }
 	
 .bbs_view_bbsid{
@@ -12,7 +22,7 @@
 }
 .bbs_view_title{
 	display: inline-block;
-	width:70%;
+	width:72%;
 	text-align: left; 
 }
 
@@ -46,16 +56,20 @@
     cursor : pointer;
 }
 
+.bbs_underline{
+	
+}
+
 .cover_userid_date{
 	display: inline-block;
 	background-color:#efefef;
-	width:950px;
+	width:95%;
 	
 }
 
 .bbs_view_userid{
 	display: inline-block;
-	width:40%;
+	width:47%;
 	text-align: left;
 }
 
@@ -65,17 +79,20 @@
 	text-align: right;
 }
 .bbs_div{
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 .cover_content{
 	display: inline-block;
-	background-color: #efefef;
-	width:950px;
+	background-color: #ffffff;
+	width:95%;;
+    margin-bottom: 10px;
 }
 
 .bbs_view_content{
-	display: inline-block;
-	width:90%; 
-	text-align: left;
+    display: inline-block;
+    width: 90%;
+    text-align: left;
+    height: 200px;
+    margin: 15px 0;
 
 }

@@ -40,7 +40,7 @@
 %>
 
 	<div class="content">
-		<div class="container">
+		<div class="content_inner">
 			<div class="bbs_div"></div>
 			<div class="cover_bbsid_title_modify_delete">
 				<div class="bbs_view_bbsid">
@@ -57,8 +57,9 @@
 					<input type="button" value="삭제" name="">
 				</div>
 			</div>
-
 			<div class="bbs_div"></div>
+
+			<div class="bbs_underline"></div>
 			<div class="cover_userid_date">
 				<div class="bbs_view_userid">
 					[작성자]
